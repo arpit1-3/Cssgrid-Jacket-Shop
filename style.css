@@ -92,11 +92,22 @@ html,body{
 .elem:hover a{
     text-decoration: underline;
 }
-#bottom{
-    min-height: 198px;
-    width: 100%;
-    background-color: red;
+#bottom {
+    height: 100vh; /* Makes it cover the full viewport height */
+    width: 100%; /* Covers the full width */
+    background-color: rgb(255, 255, 255);
     background-image: url(https://images.unsplash.com/photo-1484973550311-411a70d6edb5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    background-size: cover;
-    background-position: 0 29%;
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+}
+
+@media (max-width: 768px) {
+    #right {
+        width: 100%;
+    }
+    #center h1 {
+        font-size: 36px;
+        line-height: 44px;
+    }
 }
